@@ -53,3 +53,56 @@
    @apply px-8 py-2 font-bold border-2 border-black hover:bg-black hover:text-white
 
  }
+
+ .hamburger{
+   cursor: pointer;
+   width: 24px;
+   height: 24px;
+   transition: all 0.25s;
+   position: relative
+
+ }
+
+ .hamburger-top,
+ .hamburger-middle,
+ .hamburger-bottom {
+   position: absolute;
+   width: 24px;
+   height: 2px;
+   top: 0;
+   left: 0;
+   background: #fff;
+   transform: rotate(0);
+   transition: all 0.5s;
+
+ }
+ /* Hamburger middle line */
+ .hamburger-middle {
+    transform: translateY(7px)
+ }
+/* Hamburger middle line */
+ .hamburger-bottom {
+    transform: translateY(14px)
+ }
+
+ /* Hamburger Animation */
+ /* major movement */
+ .open {
+    transform: rotate(90deg);
+    
+ }
+
+
+/* move each peice into place */
+ .open .hamburger-top {
+  transform: rotate(45deg) translateY(6px) translateX(6px);
+ }
+/* Only neeed to lines for an cross */
+ .open .hamburger-middle {
+    display: none;
+ }
+
+ .open .hamburger-bottom {
+    transform: rotate(-45deg) translateY(6px) translateX(-6px);
+ }
+
